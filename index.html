@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" /><link rel="stylesheet"
+    href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.4.0/build/styles/dracula.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="editor-tabs">
+            <span class="tab open">
+                <i class="fas fa-pen"></i>EDIT
+            </span>
+            <span class="tab">
+                <i class="fas fa-eye"></i>PREVIEW
+            </span>
+        </div>
+        <div class="story open">
+            <textarea class="story-title" placeholder="Enter Story Title" spellcheck="false" onkeyup="update()"></textarea>
+            <textarea class="story-date" placeholder="Enter Story Date" spellcheck="false" onkeyup="update()"></textarea>
+            <textarea class="story-desc" placeholder="Enter Story Desc" spellcheck="false" onkeyup="update()"></textarea>
+            <textarea class="story-preview-desc" placeholder="Enter Story Preview Desc" spellcheck="false" onkeyup="update()"></textarea>
+            <textarea class="story-link" placeholder="Enter Story Link Router" spellcheck="false" onkeyup="update()"></textarea>
+            <textarea class="story-bg-src" placeholder="Enter Story Background" spellcheck="false" onkeyup="update()"></textarea>
+            <div class="submit-story">SUBMIT</div>
+        </div>
+        <div class="story">
+            <div class="preview-bg"></div>
+            <div class="preview-container">
+                <div class="preview-title"></div>
+                <div class="preview-date"></div>
+                <div class="preview-desc"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.4.0/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+    <script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyD5gzW4416Um4SdGCniozo9PE-dnwRvU5U",
+        authDomain: "myportfolio-d868a.firebaseapp.com",
+        databaseURL: "https://myportfolio-d868a.firebaseio.com",
+        projectId: "myportfolio-d868a",
+        storageBucket: "myportfolio-d868a.appspot.com",
+        messagingSenderId: "1062777067070",
+        appId: "1:1062777067070:web:31c114f8551074d791236f",
+        measurementId: "G-XE7L743EGW"
+    };
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
